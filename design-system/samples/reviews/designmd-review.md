@@ -1,4 +1,4 @@
-# 검수 리포트 — moveuniversity DESIGN.md + home 골든 예제 (모드 A)
+# 검수 리포트 — movingbox DESIGN.md + home 골든 예제 (모드 A)
 
 판정: **조건부 합격**
 

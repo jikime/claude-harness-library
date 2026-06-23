@@ -22,7 +22,7 @@ export function SiteFooter() {
           <p>
             대여 가격은 모두 예시이며 실제 요금은 이용 기간·지역에 따라 안내됩니다.
           </p>
-          <p>고객센터 1551-2425 · 평일 09:00–18:00</p>
+          <p>고객센터 1600-0000 · 평일 09:00–18:00</p>
         </div>
       </div>
 
@@ -37,7 +37,7 @@ export function SiteFooter() {
                 </span>
               </span>
               <span className="text-body-lg font-bold text-on-dark">
-                이사대학 렌탈
+                무빙박스 렌탈
               </span>
             </div>
             <p className="mt-4 max-w-xs text-body-sm leading-[1.6] text-ink-faint">
@@ -70,14 +70,14 @@ export function SiteFooter() {
 
         <div className="mt-12 border-t border-on-dark/10 pt-8">
           <p className="text-caption-xs leading-[1.7] text-ink-faint">
-            이사대학 렌탈 · 서울특별시 어딘가로 00, 0층 · 사업자등록번호
+            무빙박스 렌탈 · 서울특별시 어딘가로 00, 0층 · 사업자등록번호
             000-00-00000
             <br />
             본 페이지는 디자인 시스템 적용 예시로 제작되었으며, 표기된 수치·후기는
             샘플입니다.
           </p>
           <p className="mt-4 text-caption-xs text-ink-faint">
-            © 2026 이사대학 렌탈. All rights reserved.
+            © 2026 무빙박스 렌탈. All rights reserved.
           </p>
         </div>
       </div>

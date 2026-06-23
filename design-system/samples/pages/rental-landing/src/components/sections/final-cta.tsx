@@ -29,7 +29,7 @@ export function FinalCta() {
             asChild
             className="h-14 rounded-2xl bg-coral-strong px-8 text-body-lg font-semibold text-on-primary hover:bg-coral-soft"
           >
-            <a href="tel:1551-2425">
+            <a href="tel:1600-0000">
               렌탈 견적 신청
               <ArrowRight className="size-5" aria-hidden />
             </a>
@@ -39,9 +39,9 @@ export function FinalCta() {
             variant="outline"
             className="h-14 rounded-2xl border-on-dark/40 bg-canvas/5 px-8 text-body-lg font-semibold text-on-dark backdrop-blur-sm hover:bg-canvas/15 hover:text-on-dark"
           >
-            <a href="tel:1551-2425">
+            <a href="tel:1600-0000">
               <Phone className="size-5" aria-hidden />
-              1551-2425
+              1600-0000
             </a>
           </Button>
         </div>

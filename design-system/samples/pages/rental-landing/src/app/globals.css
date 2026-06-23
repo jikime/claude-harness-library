@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
-  moveuniversity 디자인 시스템 → shadcn 토큰 매핑
-  SSOT: artifacts/sites/moveuniversity/DESIGN.md
+  movingbox 디자인 시스템 → shadcn 토큰 매핑
+  SSOT: artifacts/sites/movingbox/DESIGN.md
   모든 색은 DESIGN.md colors 토큰의 hex 그대로(off-system 0건).
 */
 @theme inline {

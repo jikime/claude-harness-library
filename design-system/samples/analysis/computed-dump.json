@@ -1,5 +1,5 @@
 {
-  "title": "이사대학 | 포장이사 견적비교 3분 만에 최저가 확인",
+  "title": "무빙박스 | 포장이사 견적비교 3분 만에 최저가 확인",
   "lang": "ko",
   "samples": [
     {
@@ -141,7 +141,7 @@
     {
       "tag": "A",
       "cls": "css-ns9adv",
-      "txt": "1551-2425",
+      "txt": "1600-0000",
       "color": "rgb(255, 112, 83)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",
@@ -158,7 +158,7 @@
     {
       "tag": "SPAN",
       "cls": "css-ymxtl5",
-      "txt": "1551-2425",
+      "txt": "1600-0000",
       "color": "rgb(255, 112, 83)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",
@@ -498,7 +498,7 @@
     {
       "tag": "H2",
       "cls": "css-19j334a",
-      "txt": "이사대학은 처음 상담부터 이사 완료까지\n안심할 수 있는 이사를 제공합니다",
+      "txt": "무빙박스은 처음 상담부터 이사 완료까지\n안심할 수 있는 이사를 제공합니다",
       "color": "rgb(26, 26, 26)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",
@@ -957,7 +957,7 @@
     {
       "tag": "SPAN",
       "cls": "css-a56mfo",
-      "txt": "이사대학은 타 업체 대비 20% 이상 저렴해요!",
+      "txt": "무빙박스은 타 업체 대비 20% 이상 저렴해요!",
       "color": "rgb(23, 23, 23)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",
@@ -1263,7 +1263,7 @@
     {
       "tag": "A",
       "cls": "css-ikuqec",
-      "txt": "1551-2425",
+      "txt": "1600-0000",
       "color": "rgb(51, 51, 51)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",
@@ -1365,7 +1365,7 @@
     {
       "tag": "SPAN",
       "cls": "css-1hck30f",
-      "txt": "1551-2425",
+      "txt": "1600-0000",
       "color": "rgb(255, 112, 83)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",
@@ -1416,7 +1416,7 @@
     {
       "tag": "P",
       "cls": "css-o6ad6k",
-      "txt": "Copyright © 2026 이사대학, All rights reserv",
+      "txt": "Copyright © 2026 무빙박스, All rights reserv",
       "color": "rgb(136, 136, 136)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",
@@ -1433,7 +1433,7 @@
     {
       "tag": "SPAN",
       "cls": "css-s85ix4",
-      "txt": "이사대학",
+      "txt": "무빙박스",
       "color": "rgb(51, 51, 51)",
       "background": "rgba(0, 0, 0, 0)",
       "fontFamily": "pretendard, \"pretendard Fallback\", sans-serif",

@@ -1,7 +1,7 @@
-# Showcase Review — moveuniversity (모드 A · A6)
+# Showcase Review — movingbox (모드 A · A6)
 
-- 대상: `artifacts/sites/moveuniversity/design-system.html`
-- 기준(SSOT): `artifacts/sites/moveuniversity/DESIGN.md` (version: alpha)
+- 대상: `artifacts/sites/movingbox/design-system.html`
+- 기준(SSOT): `artifacts/sites/movingbox/DESIGN.md` (version: alpha)
 - 검수자: design-system-reviewer (빌더와 분리)
 - 일자: 2026-06-23
 - 렌더 검증: Playwright 1.61.0 (Chromium, 1280px + 390px), full-page 스크린샷

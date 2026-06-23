@@ -13,7 +13,7 @@ export function QuickCta() {
           카카오 상담
         </a>
         <a
-          href="tel:1551-2425"
+          href="tel:1600-0000"
           className="flex w-[168px] items-center gap-2.5 rounded-lg bg-coral-strong px-4 py-3 text-body-sm font-semibold text-on-primary transition-transform duration-[150ms] hover:-translate-y-0.5 [transition-timing-function:var(--ease-standard)]"
         >
           <Phone className="size-5" aria-hidden />
@@ -31,7 +31,7 @@ export function QuickCta() {
           카카오 상담
         </a>
         <a
-          href="tel:1551-2425"
+          href="tel:1600-0000"
           className="flex flex-1 items-center justify-center gap-2 bg-coral-strong py-4 text-body font-semibold text-on-primary"
         >
           <Phone className="size-5" aria-hidden />

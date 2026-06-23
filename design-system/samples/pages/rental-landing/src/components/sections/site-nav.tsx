@@ -48,7 +48,7 @@ export function SiteNav() {
           <Link
             href="#top"
             className="flex items-center gap-2"
-            aria-label="이사대학 렌탈 홈"
+            aria-label="무빙박스 렌탈 홈"
           >
             <span
               className={
@@ -66,7 +66,7 @@ export function SiteNav() {
                   : "text-body-lg font-bold text-ink lg:text-on-dark"
               }
             >
-              이사대학 렌탈
+              무빙박스 렌탈
             </span>
           </Link>
 
@@ -90,7 +90,7 @@ export function SiteNav() {
           {/* 우측: 전화 + CTA */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:1551-2425"
+              href="tel:1600-0000"
               className={
                 scrolled
                   ? "hidden items-center gap-2 text-phone text-ink sm:flex"
@@ -98,7 +98,7 @@ export function SiteNav() {
               }
             >
               <Phone className="size-5" aria-hidden />
-              <span>1551-2425</span>
+              <span>1600-0000</span>
             </a>
 
             <Button
@@ -133,7 +133,7 @@ export function SiteNav() {
               >
                 <SheetHeader className="border-b border-hairline px-6 py-5">
                   <SheetTitle className="text-title font-semibold text-ink">
-                    이사대학 렌탈
+                    무빙박스 렌탈
                   </SheetTitle>
                 </SheetHeader>
 
@@ -152,11 +152,11 @@ export function SiteNav() {
 
                 <div className="mt-auto flex flex-col gap-3 border-t border-hairline px-6 py-5">
                   <a
-                    href="tel:1551-2425"
+                    href="tel:1600-0000"
                     className="flex items-center justify-center gap-2 text-phone text-ink"
                   >
                     <Phone className="size-5" aria-hidden />
-                    <span>1551-2425</span>
+                    <span>1600-0000</span>
                   </a>
                   <SheetClose asChild>
                     <Button

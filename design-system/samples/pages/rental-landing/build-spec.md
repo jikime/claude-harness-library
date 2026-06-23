@@ -1,4 +1,4 @@
-# build-spec — rental-landing (이사대학 렌탈)
+# build-spec — rental-landing (무빙박스 렌탈)
 
 흐름 B 생성 계획. 토큰 SSOT = `DESIGN.md`, 섹션 리듬 SSOT = `examples/home/layout.md`.
 스택: Next.js 16 App Router + React 19 + Tailwind v4 + shadcn(radix base, lucide).
@@ -10,7 +10,7 @@
 
 | # | 섹션 | 면색(토큰) | 핵심 요소 |
 |---|---|---|---|
-| 1 | **fixed nav** | 투명→스크롤 시 canvas+hairline | 로고(이사대학 렌탈) · 메뉴(품목/이용방법/요금/후기) · 전화 `phone` 타입 · 코랄 CTA "렌탈 신청" · 모바일 sheet 메뉴 |
+| 1 | **fixed nav** | 투명→스크롤 시 canvas+hairline | 로고(무빙박스 렌탈) · 메뉴(품목/이용방법/요금/후기) · 전화 `phone` 타입 · 코랄 CTA "렌탈 신청" · 모바일 sheet 메뉴 |
 | 2 | **hero** | 이미지 + scrim 0.75 | 배지 → `display` 헤드라인 2줄 → 보조문 → 코랄 CTA + 보조 outline 버튼. `hero-boxes.png` |
 | 3 | **인기 렌탈 품목** | canvas | `headline` + 품목 카드 그리드(6): 이미지·이름·일 대여료(코랄)·"담기" 버튼. card + hairline flat |
 | 4 | **이용 방법 3스텝** | surface-soft | 신청 → 문앞 배송 → 사용 후 반납. 번호 badge + 아이콘(lucide) + 설명 |

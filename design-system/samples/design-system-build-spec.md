@@ -1,6 +1,6 @@
 # design-system.html — build spec (쇼케이스 모드)
 
-> 흐름 A 헤드라인 산출물. moveuniversity DESIGN.md(alpha) + examples/home를 단일 HTML
+> 흐름 A 헤드라인 산출물. movingbox DESIGN.md(alpha) + examples/home를 단일 HTML
 > 스타일가이드로 출력. 상태: **미검증**(design-system-reviewer 모드 A 검수 대기).
 
 ## 입력

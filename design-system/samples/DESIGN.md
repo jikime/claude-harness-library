@@ -1,6 +1,6 @@
 ---
 version: alpha
-name: moveuniversity
+name: movingbox
 description: >
   코랄(#ff6242 계열) 강조색과 잉크 그레이를 축으로 한, 전환(견적 신청) 중심
   한국어 마케팅 랜딩 시스템. 흰 캔버스를 기본으로 다크 패널(#35363a)·옅은
@@ -316,7 +316,7 @@ components:
 
 ## Overview
 
-moveuniversity는 이사 견적 신청 **전환**을 목표로 한 단일 길이 한국어 랜딩
+movingbox는 이사 견적 신청 **전환**을 목표로 한 단일 길이 한국어 랜딩
 시스템이다. 흰 캔버스(`{colors.canvas}`)를 바탕으로 코랄 강조색
 (`{colors.primary}` 계열)과 잉크 그레이(`{colors.ink}` 스케일)를 축으로 쓴다.
 면색 섹션(다크 `{colors.surface-dark}` · 코랄틴트 `{colors.primary-tint}` ·
@@ -340,7 +340,7 @@ moveuniversity는 이사 견적 신청 **전환**을 목표로 한 단일 길이
 
 ## Colors
 
-> Source pages: `home`(`https://moveuniversity.kr/ko`) — 단일 페이지 1회 관측.
+> Source pages: `home`(`https://movingbox.example/ko`) — 단일 페이지 1회 관측.
 > 모든 토큰 `seen on: home`. 교차출현 검증 전이라 canonical 확정은 다른 페이지
 > 누적 시. primitive 색 램프는 미노출(LightningCSS 인라인 컴파일) → semantic 직행.
 

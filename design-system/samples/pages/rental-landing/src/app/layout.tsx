@@ -10,7 +10,7 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "이사대학 렌탈 — 이사용품·장비 대여 서비스",
+  title: "무빙박스 렌탈 — 이사용품·장비 대여 서비스",
   description:
     "포장박스부터 핸드카트·이사 사다리까지, 필요한 만큼만 빌리는 이사 준비물 렌탈. 신청 한 번에 문 앞 배송, 이사 끝나면 반납.",
 };

@@ -3,3 +3,6 @@ _workspace/
 
 # OS
 .DS_Store
+
+# 원본 사이트 레퍼런스 캡처 (저작권/브랜드 노출 방지 — 커밋 금지)
+**/examples/**/reference-*.png

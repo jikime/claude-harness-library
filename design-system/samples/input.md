@@ -1,9 +1,9 @@
-# 흐름 A 입력 — moveuniversity
+# 흐름 A 입력 — movingbox
 
-- **슬러그**: `moveuniversity`
-- **대상 호스트**: moveuniversity.kr
+- **슬러그**: `movingbox`
+- **대상 호스트**: movingbox.example
 - **대표 페이지(아키타입)**:
-  - home — `https://moveuniversity.kr/ko` (랜딩)
+  - home — `https://movingbox.example/ko` (랜딩)
 - **캡처 방식**: Playwright 자동 캡처(CLI 설치 확인됨), 폴백 스크린샷
 - **기술 스택 관찰**: Next.js (App Router, `_next/static`), Pretendard Variable 폰트, ko/en 다국어(NEXT_LOCALE)
 - **상태**: 분석 진행 중

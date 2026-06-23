@@ -42,14 +42,13 @@ claude-harness-library/
 └── design-system/       ← 하네스 1
     ├── agents/          ← 역할 카드 (.claude/agents 로 복사)
     ├── skills/          ← 작업 매뉴얼 (.claude/skills 로 복사)
-    ├── samples/         ← 실제 산출물 예시 (참고용, 복사 불필요)
-    └── README.md        ← 하네스별 상세 안내
+    └── README.md        ← 하네스별 상세 안내 (데모·샘플 소스 링크)
 ```
 
 - **`agents/`** — 각 작업을 수행하는 전문 에이전트의 역할 정의
 - **`skills/`** — 자연어 트리거와 단계별 절차가 담긴 스킬 매뉴얼(오케스트레이터 포함)
-- **`samples/`** — 그 하네스가 실제로 만들어낸 결과물 예시. 동작 확인·학습용이며 복사 대상이 아닙니다.
+- 각 하네스가 만들어낸 실제 산출물(데모 사이트·디자인 시스템·샘플 소스)은 하네스별 `README.md`의 링크에서 확인할 수 있습니다.
 
 ## 라이선스 / 기여
 
-새 하네스는 `harness-lab`으로 설계한 뒤 동일한 폴더 규약(`<harness>/{agents,skills,samples}`)으로 추가하고, 위 표에 한 줄을 더해 주세요.
+새 하네스는 `harness-lab`으로 설계한 뒤 동일한 폴더 규약(`<harness>/{agents,skills}`)으로 추가하고, 위 표에 한 줄을 더해 주세요.

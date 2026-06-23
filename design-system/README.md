@@ -4,12 +4,8 @@
 
 ## 결과물 확인하기
 
-- **디자인 시스템을 한눈에** — `samples/design-system.html`을 브라우저로 열면 추출된 색상·타이포그래피·간격·컴포넌트를 시각적으로 확인할 수 있습니다.
+- **데모 사이트** — [https://rental-landing-ashy.vercel.app](https://rental-landing-ashy.vercel.app) 에서 `DESIGN.md`에 정의한 디자인 시스템을 그대로 적용해 만든 샘플 사이트를 바로 확인할 수 있습니다.
 
-- **샘플 사이트 직접 실행** — `samples/pages/rental-landing`에서 아래 명령을 실행하면, `DESIGN.md`에 정의한 디자인 시스템을 그대로 적용해 만든 샘플 사이트를 실제로 띄워볼 수 있습니다.
+- **디자인 시스템** — [https://rental-landing-ashy.vercel.app/design-system.html](https://rental-landing-ashy.vercel.app/design-system.html) 에서 추출된 색상·타이포그래피·간격·컴포넌트를 한눈에 볼 수 있습니다.
 
-  ```bash
-  cd samples/pages/rental-landing
-  npm install
-  npm run dev
-  ```
+- **샘플 소스 코드** — [https://github.com/jikime/rental-landing](https://github.com/jikime/rental-landing) 에서 샘플 사이트의 전체 소스를 확인할 수 있습니다.

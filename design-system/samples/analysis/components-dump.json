@@ -1,0 +1,235 @@
+{
+  "buttons": [
+    {
+      "tag": "BUTTON",
+      "txt": "한국어",
+      "bg": "rgb(53, 54, 58)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "300px",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "padding": "2px 6px",
+      "border": "",
+      "boxShadow": "rgba(37, 40, 45, 0.15) 0px 0px 2.4px 0px"
+    },
+    {
+      "tag": "BUTTON",
+      "txt": "1분 무료 견적 신청→",
+      "bg": "rgb(255, 135, 111)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "12px",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "padding": "16px 20px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "A",
+      "txt": "혼자 살거나 짐이 많지 않다면원룸/투룸이사원",
+      "bg": "rgba(0, 0, 0, 0)",
+      "color": "rgb(37, 37, 39)",
+      "radius": "12px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "padding": "0px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "A",
+      "txt": "이사 전, 이것만은 꼭 확인하세요!놓치면 후",
+      "bg": "rgb(255, 245, 243)",
+      "color": "rgb(37, 37, 39)",
+      "radius": "0px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "padding": "0px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "BUTTON",
+      "txt": "이사",
+      "bg": "rgb(53, 54, 58)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "50px",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "padding": "0px 12px",
+      "border": "1px solid rgb(26, 26, 26)",
+      "boxShadow": ""
+    },
+    {
+      "tag": "BUTTON",
+      "txt": "청소",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(37, 37, 39)",
+      "radius": "50px",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "padding": "0px 12px",
+      "border": "1px solid rgb(208, 210, 218)",
+      "boxShadow": ""
+    },
+    {
+      "tag": "BUTTON",
+      "txt": "1톤(원룸)",
+      "bg": "rgb(244, 245, 247)",
+      "color": "rgb(0, 0, 0)",
+      "radius": "8px",
+      "fontSize": "13.3333px",
+      "fontWeight": "400",
+      "padding": "0px 16px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "BUTTON",
+      "txt": "0원으로 최저가 견적 신청→",
+      "bg": "rgb(255, 135, 111)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "12px",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "padding": "16px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "A",
+      "txt": "1분 무료 견적 신청→",
+      "bg": "rgb(255, 135, 111)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "16px",
+      "fontSize": "20px",
+      "fontWeight": "600",
+      "padding": "16px 20px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "BUTTON",
+      "txt": "무료 견적 신청 →",
+      "bg": "rgb(255, 135, 111)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "10px",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "padding": "16px 40px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "A",
+      "txt": "인터넷 상담 받고커피 쿠폰 받기",
+      "bg": "rgb(255, 255, 255)",
+      "color": "rgb(37, 37, 39)",
+      "radius": "10px",
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "padding": "10px 12px",
+      "border": "2px solid rgb(0, 122, 255)",
+      "boxShadow": ""
+    },
+    {
+      "tag": "A",
+      "txt": "실시간 카톡상담",
+      "bg": "rgb(254, 229, 0)",
+      "color": "rgb(60, 30, 30)",
+      "radius": "10px",
+      "fontSize": "14px",
+      "fontWeight": "700",
+      "padding": "10px",
+      "border": "",
+      "boxShadow": ""
+    },
+    {
+      "tag": "A",
+      "txt": "무료 견적 신청하기",
+      "bg": "rgb(255, 135, 111)",
+      "color": "rgb(255, 255, 255)",
+      "radius": "10px",
+      "fontSize": "15px",
+      "fontWeight": "700",
+      "padding": "12px",
+      "border": "",
+      "boxShadow": ""
+    }
+  ],
+  "inputDefault": {
+    "bg": "rgb(244, 245, 247)",
+    "color": "rgb(37, 37, 39)",
+    "border": "1px solid rgb(226, 227, 234)",
+    "radius": "8px",
+    "padding": "0px 16px",
+    "fontSize": "16px",
+    "height": "48px",
+    "placeholder": "성함"
+  },
+  "inputFocus": {
+    "outline": "rgb(37, 37, 39) none 3px",
+    "outlineOffset": "0px",
+    "boxShadow": "none",
+    "border": "1px solid rgb(255, 135, 111)"
+  },
+  "checkbox": {
+    "w": "0px",
+    "h": "0px",
+    "accent": "auto",
+    "appearance": "auto",
+    "checked": false
+  },
+  "ctaDefault": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "color": "rgb(255, 255, 255)",
+    "radius": "0px",
+    "transition": "all"
+  },
+  "ctaHover": {
+    "bg": "rgba(0, 0, 0, 0)",
+    "transform": "none",
+    "opacity": "1",
+    "boxShadow": ""
+  },
+  "langBtn": {
+    "bg": "rgb(53, 54, 58)",
+    "color": "rgb(255, 255, 255)",
+    "radius": "300px",
+    "border": "0px none rgb(255, 255, 255)",
+    "padding": "2px 6px"
+  },
+  "langOpenMenus": [],
+  "layers": [
+    {
+      "tag": "HEADER",
+      "cls": "css-1mpym6u",
+      "pos": "fixed",
+      "z": "100"
+    },
+    {
+      "tag": "DIV",
+      "cls": "css-1u2o1n8",
+      "pos": "fixed",
+      "z": "98"
+    },
+    {
+      "tag": "DIV",
+      "cls": "css-1xgsqwo",
+      "pos": "fixed",
+      "z": "99"
+    }
+  ],
+  "containers": [
+    {
+      "maxWidth": "1280px",
+      "mx": "72.5px/72.5px",
+      "px": "40px/40px"
+    },
+    {
+      "maxWidth": "1200px",
+      "mx": "112.5px/112.5px",
+      "px": "24px/24px"
+    }
+  ]
+}

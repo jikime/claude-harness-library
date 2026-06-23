@@ -1,0 +1,5 @@
+# 분석 작업 공간 (산출물 임시 보관)
+_workspace/
+
+# OS
+.DS_Store

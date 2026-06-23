@@ -1,6 +1,6 @@
 # claude-harness-library
 
-Claude Code 전용 **하네스(harness) 라이브러리**입니다. 반복 가능한 작업을 Agent와 Skill로 묶어 둔 모음으로, 모든 하네스는 [`harness-lab`](https://github.com/) 메타 스킬로 설계·생성했습니다.
+Claude Code 전용 **하네스(harness) 라이브러리**입니다. 반복 가능한 작업을 Agent와 Skill로 묶어 둔 모음으로, 모든 하네스는 [`harness-lab`](https://github.com/jikime/harness-lab) 메타 스킬로 설계·생성했습니다.
 
 여기서 "하네스"는 하나의 일을 **언제든 같은 품질로 재현**하기 위한 역할(agents) + 절차(skills) + 산출물 골격의 묶음을 뜻합니다.
 

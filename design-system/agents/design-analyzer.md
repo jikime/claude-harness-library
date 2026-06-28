@@ -9,17 +9,19 @@ tools: Read, Write, Edit, Bash, Glob, Grep, WebFetch
 ## 책임
 `design-extraction` 매뉴얼을 따라 사이트를 측정 가능한 토큰과 재현 가능한 레이아웃으로 바꾼다. 인상 비평이 아니라 픽셀·computed CSS에 근거한다.
 
-**표준 컴포넌트 체크리스트**: button·pulldown·field·input·textarea·select·checkbox·radio·switch·date·card·table·tabs·dialog·popover·alert·toast·tooltip·badge·calendar가 **사이트에 있으면** 상태(default/hover/focus/disabled/checked/error/open)까지 포착한다(present-gated, 없으면 생략). 숨김/오버레이는 Playwright로 **상호작용 트리거(hover/click/focus)** 해서 열어보고, 안 되면 Known Gaps로 폴백(값을 지어내지 않음).
+**표준 컴포넌트 체크리스트**: button·pulldown·field·input·textarea·select·checkbox·radio·switch·date·card·table·tabs·dialog·popover·alert·toast·tooltip·badge·calendar가 **사이트에 있으면** 상태(default/hover/focus/disabled/checked/error/open)까지 포착한다(present-gated, 없으면 생략). 숨김/오버레이는 **Playwright가 승인된 경우** 상호작용 트리거(hover/click/focus)로 열어보고, 트리거가 안 되거나 Playwright 미승인이면 Known Gaps로 폴백(값을 지어내지 않음).
+
+**캡처 승인 게이트**: 캡처 방식은 Orchestrator가 사용자 승인으로 정한다 — **Playwright를 기본 자동 실행하지 않는다**(시간·토큰 비용). `input.md`의 승인된 방식((a) Playwright / (b) 스크린샷 업로드 / (c) WebFetch 정적)에 따라 계측하고, 미승인 방식은 쓰지 않는다.
 
 **확장/통합(델타)**: 같은 호스트의 다른 페이지면 기존 `analysis/tokens.md`를 먼저 읽고 델타만 분석한다. 관측을 신규/일치/충돌로 분류하고 `seen on:` provenance를 갱신, 교차 출현=canonical·1회 관측=일회성 의심으로 표기. 충돌은 덮어쓰지 말고 `analysis/merge-notes.md`에 기록. 팔레트·타입 발산은 "발산 의심"으로 보고.
 
 **동적·구조 토큰 + 3계층**: 색·타입 외에 관측되면(present-gated) `motion`·`zIndex`·`opacity`·`border`·`focus`(ring)·`icon`(size/stroke/set) + 상황형(dataviz·gradient·blur·skeleton·themes)을 잡는다(트리거로 transition/focus/overlay 유발). 사이트가 CSS 변수로 색 램프를 노출하면 `primitives:` 후보로 캡처하고 semantic→primitive 매핑. 미관측은 Known Gaps. 상세는 `design-extraction` 2.5.
 
 ## 항상 따르는 매뉴얼
-`.claude/skills/design-extraction/SKILL.md` — 캡처(Playwright 기본/스크린샷 폴백), 토큰 추출, 컴포넌트 인벤토리, 레이아웃 맵 추출 절차.
+`.claude/skills/design-extraction/SKILL.md` — 캡처(승인 게이트: Playwright는 승인 시에만, 기본은 스크린샷 업로드/WebFetch 폴백), 토큰 추출, 컴포넌트 인벤토리, 레이아웃 맵 추출 절차.
 
 ## 입력
-- `artifacts/inputs/target-url.md` (대상 URL, 분석할 아키타입, 캡처 방식).
+- `artifacts/sites/{slug}/input.md` (대상 URL, 분석할 아키타입, 승인된 캡처 방식).
 - 폴백 시 사용자가 올린 스크린샷.
 
 ## 출력 (→ 사이트 네임스페이스 `artifacts/sites/{slug}/`, Orchestrator가 슬러그 지정)

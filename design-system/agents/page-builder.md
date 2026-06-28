@@ -17,7 +17,7 @@ tools: Read, Write, Edit, Bash, Glob, Grep
 `.claude/skills/page-generation/SKILL.md` — 토큰 주입(tailwind.config), 우선순위(DESIGN.md 토큰 > examples 합성 > 품질 원칙), 두 모드, AI 티 금지, 완전 출력.
 
 ## 모드 (page-generation 매뉴얼의 3모드)
-- **디자인시스템 쇼케이스 모드(흐름 A 헤드라인)**: 토큰+examples → `artifacts/design-system.html` 단일 스타일가이드(색·타입·간격/반경·컴포넌트 갤러리 + 대표 합성 섹션).
+- **디자인시스템 쇼케이스 모드(흐름 A 헤드라인)**: 토큰+examples → `artifacts/sites/{slug}/design-system.html` 단일 스타일가이드(색·타입·간격/반경·컴포넌트 갤러리 + 대표 합성 섹션).
 - **골든 예제 모드(흐름 A 검증)**: 원본 아키타입 재구성 → `examples/{archetype}/example.html`.
 - **페이지 생성 모드(흐름 B)**: 사용자 서비스 내용 → 페이지/웹·앱(standalone HTML 또는 Next.js/React).
 

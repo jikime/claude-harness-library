@@ -38,7 +38,7 @@ tailwind.config = { theme: { extend: {
 ## 세 모드
 
 ### 디자인시스템 쇼케이스 모드 (흐름 A — 헤드라인 산출물)
-- 목적: 수집된 `DESIGN.md` 토큰 + `examples/`를 합쳐 **디자인 시스템을 한 파일로 보는 자기완결 단일 HTML**(`artifacts/design-system.html`)을 만든다. 흐름 A의 사용자용 헤드라인 산출물.
+- 목적: 수집된 `DESIGN.md` 토큰 + `examples/`를 합쳐 **디자인 시스템을 한 파일로 보는 자기완결 단일 HTML**(`artifacts/sites/{slug}/design-system.html`)을 만든다. 흐름 A의 사용자용 헤드라인 산출물.
 - 성격: **스타일가이드 쇼케이스**. 아래를 한 페이지에 실제 렌더로 전시한다(설명 텍스트 + 살아있는 컴포넌트).
   1. **헤더/메타**: 시스템 이름·description(DESIGN.md frontmatter), 출처 사이트.
   2. **색 패널**: 모든 `colors` 토큰을 스와치로(역할명 + hex). 그룹별(Brand/Surface/Text/Semantic). 다크 위 색은 다크 배경에 얹어 전시.
@@ -50,7 +50,7 @@ tailwind.config = { theme: { extend: {
      - 미관측(Known Gaps) 상태는 발명하지 말고 "미관측" 라벨로 표기.
   6. **대표 합성 섹션 1개**: 주 아키타입(`examples/{primary}/layout.md`)으로 만든 히어로/섹션 1개 — "이 토큰들이 합쳐지면 이렇게 된다".
 - 자기완결: Tailwind CDN + `tailwind.config`에 토큰 주입, 단일 `.html`로 브라우저에서 바로 열림. off-system 0건. 빠짐없는 전시(모든 토큰 그룹·컴포넌트가 한 번 이상 등장)가 합격 기준.
-- 산출: `artifacts/design-system.html` + `artifacts/design-system-build-spec.md`(전시 항목 체크리스트).
+- 산출: `artifacts/sites/{slug}/design-system.html` + `artifacts/sites/{slug}/design-system-build-spec.md`(전시 항목 체크리스트).
 
 ### 골든 예제 모드 (흐름 A — 라운드트립 검증용)
 - 목적: DESIGN.draft.md만으로 원본 아키타입을 재구성해 라운드트립 검증용 `examples/{archetype}/example.html` 생성. (쇼케이스와 역할 분리: 쇼케이스=시스템 전시, 골든=원본 재현 검증.)
@@ -58,13 +58,14 @@ tailwind.config = { theme: { extend: {
 
 ### 페이지 생성 모드 (흐름 B)
 - 목적: 사용자 요청 내용으로 새 페이지/웹·앱 서비스를 만든다.
-- `artifacts/inputs/page-request.md`의 목적·내용·아키타입을 읽고, 해당 `layout.md` 리듬에 사용자 콘텐츠를 채운다. 스택은 standalone HTML(기본) 또는 요청 시 Next.js/React(토큰을 테마 변수로 매핑).
+- `artifacts/sites/{slug}/pages/{name}/request.md`의 목적·내용·아키타입을 읽고, **해당 `examples/{archetype}/layout.md`의 섹션 순서·그리드·여백 리듬을 반드시 따라** 사용자 콘텐츠를 채운다(layout.md가 없는 아키타입이면 가장 가까운 것을 쓰고 그 사실을 build-spec에 명시).
+- **출력 스택**: standalone HTML이 **기본**. 입력이 아이디어/PRD 수준(여러 화면·기능 명세)이면 Orchestrator가 **"Next.js 웹서비스로 만들어드릴까요?"를 제안**하고, 승인 시 Next.js(App Router)로 출력한다 — 같은 DESIGN.md 토큰을 `tailwind.config`/CSS 변수로 매핑하고 컴포넌트로 분할. **토큰·합성(layout.md) 우선순위는 HTML과 동일**.
 
 ## 절차
-1. **스펙 작성** — `artifacts/pages/{name}-build-spec.md`: 어떤 아키타입, 섹션 순서(각 섹션의 색블록 토큰·컴포넌트·콘텐츠), 반응형 계획. (가장 중요한 결정 = 섹션별 surface 색 선택.)
+1. **스펙 작성** — `artifacts/sites/{slug}/pages/{name}/build-spec.md`: 어떤 아키타입, 섹션 순서(각 섹션의 색블록 토큰·컴포넌트·콘텐츠), 반응형 계획. (가장 중요한 결정 = 섹션별 surface 색 선택.)
 2. **빌드** — 위 스택으로 단일 HTML. 모든 클래스/스타일이 주입된 토큰을 쓰는지 확인.
 3. **자체 점검** — 아래 체크리스트. 단, 합격 판정은 reviewer가 한다(자기 합격 금지).
-4. **저장** — `artifacts/pages/{name}.html`.
+4. **저장** — `artifacts/sites/{slug}/pages/{name}/index.html`.
 
 ## 품질 원칙 (DESIGN.md를 어기지 않는 선에서)
 

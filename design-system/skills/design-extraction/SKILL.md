@@ -12,22 +12,26 @@ description: 실제 렌더된 웹사이트를 계측해 디자인 토큰·컴포
 ## 트리거
 - 사용자가 URL(또는 스크린샷)을 주고 디자인 분석/DESIGN.md 구축을 요청할 때(흐름 A 2단계).
 
-## 1. 캡처 (Playwright 기본)
+## 1. 캡처 (승인 게이트 — Playwright는 승인 시에만)
 
-브레이크포인트마다 풀페이지 스크린샷 + computed style을 추출한다. Playwright가 없으면 `npx playwright install chromium`을 안내하고, 그래도 불가하면 스크린샷 업로드 폴백으로 전환한다.
+**캡처 방식은 Orchestrator의 승인 게이트를 따른다. Playwright를 기본 자동 실행하지 않는다**(브라우저 기동·다중 스크린샷·computed CSS 덤프로 시간·토큰 비용이 큼). 사용자가 (a) Playwright 자동 / (b) 스크린샷 업로드 / (c) WebFetch 정적 중 무엇을 승인했는지 `input.md`에서 확인하고 그에 맞춘다.
 
-캡처 스크립트 예시(Bash로 실행):
+- **(a) 승인된 경우에만 Playwright**: 브레이크포인트마다 풀페이지 스크린샷 + computed style 추출. Playwright가 없으면 `npx playwright install chromium`을 안내하고, 그래도 불가하면 스크린샷 폴백.
+- **(b) 스크린샷 업로드(권장 기본)**: 사용자가 올린 화면을 Read로 계측(아래 폴백 절차). 측정 신뢰도는 `추정`으로 표기.
+- **(c) WebFetch 정적**: 렌더 없이 HTML/인라인 CSS만 보강. 계산값·인터랙션 상태는 Known Gaps로.
+
+캡처 스크립트 예시(Playwright 승인 시, Bash로 실행):
 
 ```js
-// capture.mjs — node capture.mjs <url> <archetype>
+// capture.mjs — node capture.mjs <url> <slug> <archetype>
 import { chromium } from 'playwright';
-const [url, archetype='home'] = process.argv.slice(2);
+const [url, slug, archetype='home'] = process.argv.slice(2);
 const widths = { desktop:1440, tablet:960, mobile:560 };
 const browser = await chromium.launch();
 for (const [name,w] of Object.entries(widths)) {
   const page = await browser.newPage({ viewport:{ width:w, height:900 }, deviceScaleFactor:2 });
   await page.goto(url, { waitUntil:'networkidle' });
-  await page.screenshot({ path:`artifacts/examples/${archetype}/reference-${name}.png`, fullPage:true });
+  await page.screenshot({ path:`artifacts/sites/${slug}/examples/${archetype}/reference-${name}.png`, fullPage:true });
 }
 // computed style 덤프 (desktop 기준)
 const page = await browser.newPage({ viewport:{ width:1440, height:900 }});
@@ -63,7 +67,7 @@ computed 값을 빈도·역할로 묶어 토큰화한다.
 - **spacing**: padding/margin/gap을 8px 기반 스케일로 근사(xxs~section). 섹션 간 큰 수직 간격은 `section`.
 - **그림자**: boxShadow를 elevation 레벨(0 flat~3 modal)로 묶는다.
 
-산출: `artifacts/analysis/{site}-tokens.md` — 위 그룹별로 토큰 후보를 표로. designmd-author가 그대로 프론트매터로 옮길 수 있는 형태.
+산출: `artifacts/sites/{slug}/analysis/tokens.md` — 위 그룹별로 토큰 후보를 표로. designmd-author가 그대로 프론트매터로 옮길 수 있는 형태.
 
 ## 2.5 동적·구조 토큰 + 3계층 (present-gated)
 
@@ -118,7 +122,7 @@ dialog·tooltip·toast·popover·pulldown·calendar·select 드롭다운 등은 
 
 DESIGN.md가 못 담는 **페이지 합성**을 아키타입마다 기록한다. 대표 페이지(home/pricing/feature/dashboard 등)별로:
 
-`artifacts/examples/{archetype}/layout.md`:
+`artifacts/sites/{slug}/examples/{archetype}/layout.md`:
 ```markdown
 # {archetype} layout — source: {url}
 ## 섹션 순서 (위→아래)

@@ -25,7 +25,8 @@ description: 아이디어를 AI 개발 에이전트가 구현 가능한 19블록
 - **Technical**: 인증 / 결제 / 파일 업로드 / AI 기능 / 관리자 기능 / 외부 API 필요 여부
 - **서비스 유형 판정**: SaaS / AI / Agent 중 무엇인가 (복수 가능) → Special Rules 적용 결정
 
-## 기술 스택 기본값 (미지정 시, 버전 명시)
+## 기술 스택 기본값 (웹/TS 프리셋 — 미지정 시, 버전 명시)
+이 하네스의 기본 프리셋은 **웹/TypeScript** 제품이다. 아이디어가 비-웹(모바일·Python/Go 백엔드·데이터/임베디드)이면 이 프리셋을 강요하지 말고, Orchestrator가 0단계에서 확인한 **스택 패밀리의 합리적 기본값**을 쓴다. 어느 쪽이든 가정한 스택은 §4 Assumptions에 기록한다(몰래 가정 금지).
 - Frontend: Next.js 15 App Router · React 19 · TypeScript · Tailwind CSS · shadcn/ui
 - Backend: Next.js API Route / Server Actions
 - DB: PostgreSQL (+ Prisma ORM)
@@ -33,9 +34,11 @@ description: 아이디어를 AI 개발 에이전트가 구현 가능한 19블록
 - AI: OpenAI API (모델은 ARCHITECTURE에서 확정)
 - Deploy: Vercel
 
-정확한 패치 버전 핀은 ARCHITECTURE.md에서 확정한다. 스택을 가정했다면 §4 Assumptions에 기록한다.
+정확한 패치 버전 핀은 ARCHITECTURE.md에서 확정한다.
 
 ## PRD.md 출력 형식 — 19블록
+
+> **깊이(lite/full)**: Orchestrator가 **lite**로 지정하면 핵심 블록(§1·2·3·4·7·8·9·10·11·12·13·16·19) 중심으로 쓰고, 해당 없는 블록(§5·6·14·15·17·18)은 "해당 없음" 1줄로 둔다. **full**이면 19블록 전부. EARS·가정 기록·테스트가능 AC·§19 Open Questions는 lite에서도 유지한다.
 
 ```
 # PRD: {제품명}
@@ -86,6 +89,8 @@ description: 아이디어를 AI 개발 에이전트가 구현 가능한 19블록
 ```
 
 ## EARS 문법 (§7 기능 요구사항·§12 엣지케이스)
+EARS는 **기본 규범**이다 — 행위·상태·이벤트·오류 요구에 쓴다. 단, 단순 CRUD·정적 표시처럼 명확한 요구는 형식을 강제하지 않는다(평서문 허용). **형식보다 트리거·응답·측정 가능한 AC가 핵심**이며, 게이트는 EARS 형식 미준수가 아니라 *모호한 AC*를 탈락시킨다.
+
 형식: `While <전제>, when <트리거>, the <시스템> shall <응답>`. 절은 항상 이 순서.
 5개 패턴:
 - **Ubiquitous**: `The system shall <응답>` — 항상 성립하는 속성
@@ -108,7 +113,7 @@ description: 아이디어를 AI 개발 에이전트가 구현 가능한 19블록
 - **Agent 서비스**: Agent 정의 · Skill 정의 · Tool 정의 · Workflow 정의 · Memory 정의 · Human Review Point 자동 포함
 
 ## 품질 체크 (제출 전 자가 점검)
-- [ ] 모든 FR이 EARS로 작성돼 트리거·응답이 명시됐는가
+- [ ] 행위·상태·이벤트성 FR이 EARS로 트리거·응답이 명시됐는가 (단순 CRUD·표시 요구는 평서문 허용, 단 AC는 항상 테스트 가능해야)
 - [ ] 모든 FR에 테스트 가능한 Acceptance Criteria가 있는가
 - [ ] 내린 모든 가정이 §4에 기록됐는가 (몰래 가정 없음)
 - [ ] §19 Open Questions 블록이 존재하는가 (빈칸이면 "없음")
